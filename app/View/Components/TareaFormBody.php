@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Tarea;
 use Illuminate\View\Component;
 
 class TareaFormBody extends Component
@@ -26,6 +27,7 @@ class TareaFormBody extends Component
     {
         $params=[
             'tarea'=>$this->tarea,
+            'urgencias'=>Tarea::urgencias,
         ];
         return view('components.tarea-form-body',$params);
     }

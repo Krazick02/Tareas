@@ -5,7 +5,7 @@
 @section('content')
     <h2>Editar tarea</h2>
     <form action="{{route('tarea.store')}}" method="POST">
-        <x-tarea-form-body/>
+        <x-tarea-form-body :tarea="$tarea"/>
     </form>
     @if ($errors->any())
         <div class="alert alert-danger">
