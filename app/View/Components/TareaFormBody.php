@@ -15,6 +15,7 @@ class TareaFormBody extends Component
      */
     public function __construct($tarea=null)
     {
+        if
         $this->tarea=$tarea;
     }
 
@@ -31,4 +32,7 @@ class TareaFormBody extends Component
         ];
         return view('components.tarea-form-body',$params);
     }
+
+    https://www.youtube.com/watch?v=TJIuLWKqn5M
+
 }
