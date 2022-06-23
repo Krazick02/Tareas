@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use App\Models\Tarea;
+use Carbon\Carbon;
 use Illuminate\View\Component;
 
 class TareaFormBody extends Component
@@ -15,7 +16,12 @@ class TareaFormBody extends Component
      */
     public function __construct($tarea=null)
     {
-        if
+        if(is_null($tarea)){
+            $tarea=Tarea::make([
+                'urgencia'=>0,
+                'fecha_limite'=>Carbon::now()->addHours(1),
+            ]);
+        }
         $this->tarea=$tarea;
     }
 
@@ -33,6 +39,6 @@ class TareaFormBody extends Component
         return view('components.tarea-form-body',$params);
     }
 
-    https://www.youtube.com/watch?v=TJIuLWKqn5M
+
 
 }

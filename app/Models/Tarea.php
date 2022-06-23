@@ -22,10 +22,12 @@ class Tarea extends Model
     protected $dates=['fecha_limite'];
 
     public const urgencias=['Baja','Normal','Alta'];
+
     public function urgencia(){
         return self::urgencias[$this->urgencia];
     }
+
     public function finalizada(){
-        return $this->finalizada==1?'si':'no';
+        return $this->finalizada == 1 ?'si':'no';
     }
 }

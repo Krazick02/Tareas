@@ -20,11 +20,11 @@
             </div>
             <div class="col-sm-4">
                 <label for="fecha_limite" class="form-label">Fecha Limite</label>
-                <input type="datetime-local" name="fecha_limite" id="fecha_limite" class="form-control" value="{{old('fecha_limite')}}">
+                <input type="datetime-local" name="fecha_limite" id="fecha_limite" class="form-control" value="{{old('fecha_limite',is_null($tarea->fecha_limite) ? '' : $tarea->fecha_limite->format('y-m-d\TH:i'))}}">
             </div>
             <div class="col-sm-12">
                 <label for="descripcion" class="form-label">Descripcion</label>
-                <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="form-control">{{old('descripcion')}}</textarea>
+                <textarea name="descripcion" id="descripcion" cols="30" rows="10" class="form-control">{{old('descripcion',$tarea->descripcion)}}</textarea>
             </div>
             <div class="col-sm-12 text-end">
                 <button type="submit" class="btn btn-primary m-2">Guardar</button>

@@ -39,7 +39,7 @@ class TareaController extends Controller
         $entrada=$request->validate([
             'nombre'=>'required',
             'descripcion'=>'required',
-            'finalizada'=>'nullable|numeric|min:0|max:1',
+            'finalizada'=>'nullable',
             'urgencia'=>'required|numeric|min:0|max:2',
             'fecha_limite'=>'required|date_format:Y-m-d\TH:i',
         ]);
